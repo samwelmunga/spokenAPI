@@ -1,35 +1,24 @@
 {
   "name": "spokenapi",
   "version": "1.0.0",
-  "description": "communication-development analytics tool",
-  "main": "hello.js",
-  "dependencies": {
-    "apollo-server-express": "^1.3.2",
-    "express": "^4.16.2",
-    "express-graphql": "^0.6.12",
-    "graphql": "^0.13.1",
-    "node": "^9.8.0",
-    "node-fetch": "^2.1.1"
-  },
-  "devDependencies": {},
+  "description": "'analytics tool for communication development'",
+  "main": "mongo_DB.js",
   "scripts": {
-    "test": "echo \n No test specified!",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samwelmunga/spokenAPI.git"
   },
-  "keywords": [
-    "analytics",
-    "AAC",
-    "speech",
-    "progress"
-  ],
   "author": "Samwel Munga",
-  "license": "SEE LICENSE IN license.txt",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/samwelmunga/spokenAPI/issues"
   },
-  "homepage": "https://github.com/samwelmunga/spokenAPI#readme"
+  "homepage": "https://github.com/samwelmunga/spokenAPI#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.5"
+  }
 }
