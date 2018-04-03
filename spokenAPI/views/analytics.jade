@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    p Showing analytics for...
+
+    ul
+        - for(i = 0; i < dataList.length; i++) {
+            li= dataList[i]
+        - }

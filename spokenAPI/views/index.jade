@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="analytics", method="post")
+    fieldset#user_section.optSection
+      h1 Choose who:
+      select.field(name="user_option")
+        option(value="0") Mattias
+      h1 or
+      input.field(type="text", name="user_input", placeholder="User ID")
+
+    fieldset#time_section.optSection
+      h1 Choose when:
+      p since
+      input.field(type="date", name="startTime")
+      #durationTime
+        p and
+        input.field(type="number", name="durationTime" max="12" id="duration")
+        label(for="duration")  months forward
+
+    fieldset#topic_section.optSection
+      h1 Choose what:
+      p Average
+        select.field(name="topic")
+          option(value="0") Topic 1
+          option(value="1") Topic 2
+          option(value="2") Topic 3
+      button(type="submit") Show
+
+  script(src="./javascripts/fields.js")
