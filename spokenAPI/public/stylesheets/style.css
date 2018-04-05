@@ -6,3 +6,7 @@ body {
 a, h1 {
   color: #00B7FF;
 }
+
+.hidden {
+  display: none;
+}

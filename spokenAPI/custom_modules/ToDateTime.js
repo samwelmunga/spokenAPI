@@ -4,8 +4,11 @@ function ToDateTime() {
 
     this.results    = [];
 
+    this.data       = []
+
     this.reset    = function() {
         m_this.results = [];
+        m_this.data    = [];
     }
 
     this.fromUnix = function( item, err ) {
@@ -16,6 +19,7 @@ function ToDateTime() {
         seconds  = "0" + date.getSeconds(),
         formattedTime = date.getDate() + '/' + (date.getMonth() + 1) + ' - ' + date.getFullYear() + ', ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2); 
         m_this.results.push(formattedTime);
+        m_this.data.push(item);
 
     };
 

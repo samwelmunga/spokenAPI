@@ -8,17 +8,15 @@ block content
       h1 Choose who:
       select.field(name="user_option")
         option(value="0") Mattias
-      h1 or
-      input.field(type="text", name="user_input", placeholder="User ID")
 
     fieldset#time_section.optSection
       h1 Choose when:
       p since
-      input.field(type="date", name="startTime")
-      #durationTime
+      input.field(type="date", name="start_date" id="startDate")
+      #durationField
         p and
-        input.field(type="number", name="durationTime" max="12" id="duration")
-        label(for="duration")  months forward
+        input.field(type="number", name="duration_time" max="12" id="durationTime")
+        label(for="durationTime")  months forward
 
     fieldset#topic_section.optSection
       h1 Choose what:
@@ -27,6 +25,9 @@ block content
           option(value="0") Topic 1
           option(value="1") Topic 2
           option(value="2") Topic 3
-      button(type="submit") Show
+    input.hidden#user(type="text" name="user")
+    input.hidden#start(type="text" name="start")
+    input.hidden#until(type="text" name="until")
+    button(type="submit") Show
 
   script(src="./javascripts/fields.js")
